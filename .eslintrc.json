@@ -2,19 +2,11 @@
   "extends": [
     "next/core-web-vitals",
     "next/typescript",
-    "prettier",
-    "standart",
-    "plugin:tailwindcss/recommended"
+    "standard",
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": false,
-        "parser": "flow",
-        "endOfLine": "auto"
-      }
-    ]
-  },
-  "ignorePatterns": ["*.d.ts"]
+    "no-undef": "off"
+  }
 }
