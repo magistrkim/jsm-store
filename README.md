@@ -44,8 +44,6 @@ A storage management and file sharing platform that lets users effortlessly uplo
 
 👉 **Sorting Options**: Organize files efficiently by sorting them by date, name, or size, making file management a breeze.
 
-👉 **Modern Responsive Design**: A fresh and minimalist UI that emphasizes usability, ensuring a clean aesthetic across all devices.
-
 and many more, including the latest **React 19**, **Next.js 15** and **Appwrite** features alongside code architecture and
 reusability
 
