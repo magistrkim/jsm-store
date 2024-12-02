@@ -17,6 +17,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { createAccount } from "@/lib/actions/user.actions";
+import OTPModal from "./OTPModal";
 
 type FormType = "sign-in" | "sign-up";
 
@@ -34,7 +35,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [accountId, setAccountId] = useState(null);
-  
+
   const formSchema = authFormSchema(type);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -138,8 +139,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           </div>
         </form>
       </Form>
-
-      {/* OTP Verification */}
+      {accountId && <OTPModal />}
     </>
   );
 };
