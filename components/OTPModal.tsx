@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   AlertDialog,
@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { verifySecret } from "@/lib/actions/user.actions";
+import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 
 const OTPModal = ({
@@ -44,7 +44,7 @@ const OTPModal = ({
     setIsLoading(false);
   };
   const handleResendOTP = async () => {
-    // Call API for resend OTP
+    await sendEmailOTP({ email });
   };
   return (
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
