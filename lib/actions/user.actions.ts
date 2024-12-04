@@ -5,7 +5,7 @@ import { createAdminClient } from "../appwrite";
 import { appwriteConfig } from "../appwrite/config";
 import { parseStringify } from "../utils";
 
- const getUserByEmail = async (email: string) => {
+const getUserByEmail = async (email: string) => {
   const { databases } = await createAdminClient();
   const result = await databases.listDocuments(
     appwriteConfig.databaseId,
@@ -15,7 +15,7 @@ import { parseStringify } from "../utils";
   return result.total > 0 ? result.documents[0] : null;
 };
 
- const handleError = (error: unknown, message: string) => {
+const handleError = (error: unknown, message: string) => {
   console.log(error, message);
   throw error;
 };
@@ -56,4 +56,19 @@ export const createAccount = async ({
     );
   }
   return parseStringify({ accountId });
+};
+
+export const verifySecret = async ({
+  accountId,
+  password,
+}: {
+  accountId: string;
+  password: string;
+}) => {
+  try {
+    const { account } = await createAdminClient();
+    const session = await account.createSession(accountId, password)
+  } catch (error) {
+    handleError(error, "Failed to verify OTP");
+  }
 };
