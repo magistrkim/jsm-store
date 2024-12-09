@@ -35,8 +35,10 @@ const OTPModal = ({
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     setIsLoading(true);
+    console.log({ accountId, password });
     try {
       const sessionId = await verifySecret({ accountId, password });
+      console.log({ sessionId });
       if (sessionId) router.push("/");
     } catch (error) {
       console.log("Failed to verify OTP", error);
