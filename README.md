@@ -40,9 +40,7 @@ A storage management and file sharing platform that lets users effortlessly uplo
 and many more, including the latest **React 19**, **Next.js 15** and **Appwrite** features alongside code architecture and
 reusability
 
-<div align="center">
-  
-## <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank" name="features">©️ MagistrKim 2024</a>       
+<div align="center">   
 
   <br />
   <div>
@@ -52,3 +50,5 @@ reusability
     <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
   </div>
 </div>
+
+## <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank" name="features">©️ MagistrKim 2024</a>    
