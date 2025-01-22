@@ -51,4 +51,4 @@ reusability
   </div>
 </div>
 
-## <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank" name="features">©️ MagistrKim 2024</a>    
+
